@@ -2,6 +2,12 @@
 
 社員がAndroidスマホでQRコードをスキャンし、製品の作業工程進捗（開始・完了）をサーバPC（このリポジトリを動かすPC）に記録するPOCです。詳細な要件は `docs/requirements.md` を参照してください。
 
+## 画面キャプチャ
+
+| スキャン画面 | 履歴画面 | テスト用QR生成画面 |
+|---|---|---|
+| ![スキャン画面](docs/images/scan.jpg) | ![履歴画面](docs/images/history.jpg) | ![テスト用QR生成画面](docs/images/test-qr.jpg) |
+
 ## 構成
 
 - サーバ: Node.js + Express + better-sqlite3（`server/`）
