@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テスト用QR生成 - 作業工程記録</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>テスト用QR生成</h1>
+<nav>
+  <a href="index.html">スキャン</a>
+  <a href="history.html">履歴</a>
+  <a href="test-qr.html">テスト用QR生成</a>
+</nav>
+
+<div class="card">
+  <label for="employee-input">社員番号（EMP-の後ろ）</label>
+  <input type="text" id="employee-input" value="001">
+  <button id="employee-generate">社員QRを生成</button>
+</div>
+
+<div class="card">
+  <label for="product-input">製品番号（PROD-の後ろ）</label>
+  <input type="text" id="product-input" value="01">
+  <button id="product-generate">製品QRを生成</button>
+</div>
+
+<div class="card">
+  <label for="proc-product-input">製品番号（工程QR用）</label>
+  <input type="text" id="proc-product-input" value="01">
+  <label for="proc-type-select">工程種別</label>
+  <select id="proc-type-select">
+    <option value="S1_START">作業工程1 開始</option>
+    <option value="S1_END">作業工程1 完了</option>
+    <option value="S2_START">作業工程2 開始</option>
+    <option value="S2_END">作業工程2 完了</option>
+    <option value="ALL_END">全工程完了</option>
+  </select>
+  <button id="proc-generate">工程QRを生成</button>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;font-size:1rem;">生成したQRコード</h2>
+  <div id="qr-grid" class="qr-grid"></div>
+</div>
+
+<script src="libs/qrcode-generator.js"></script>
+<script src="test-qr.js"></script>
+</body>
+</html>

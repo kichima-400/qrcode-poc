@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRスキャン - 作業工程記録</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>QRスキャン</h1>
+<nav>
+  <a href="index.html">スキャン</a>
+  <a href="history.html">履歴</a>
+  <a href="test-qr.html">テスト用QR生成</a>
+</nav>
+
+<div id="employee-badge">
+  <span id="employee-label">社員QR未スキャン</span>
+  <button id="logout-btn" class="secondary" style="display:none;">ログアウト</button>
+</div>
+
+<div class="reader-wrapper">
+  <div id="reader"></div>
+  <div id="scan-overlay" class="scan-overlay hidden">
+    <div id="scan-overlay-icon" class="scan-overlay-icon"></div>
+    <div id="scan-overlay-message" class="scan-overlay-message"></div>
+  </div>
+</div>
+<div id="result" class="idle">QRコードをカメラにかざしてください</div>
+
+<script src="libs/html5-qrcode.min.js"></script>
+<script src="scan.js"></script>
+</body>
+</html>

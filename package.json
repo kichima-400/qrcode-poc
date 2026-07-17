@@ -1,0 +1,20 @@
+{
+  "name": "qrcode-poc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "QRコード作業工程記録POC",
+  "main": "server/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test server/lib/qrParser.test.js server/lib/stateMachine.test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^5.0.1"
+  },
+  "devDependencies": {
+    "html5-qrcode": "^2.3.8",
+    "qrcode-generator": "^2.0.4"
+  }
+}

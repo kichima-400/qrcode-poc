@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>履歴 - 作業工程記録</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>スキャン履歴</h1>
+<nav>
+  <a href="index.html">スキャン</a>
+  <a href="history.html">履歴</a>
+  <a href="test-qr.html">テスト用QR生成</a>
+</nav>
+
+<div class="card">
+  <h2 style="margin-top:0;font-size:1rem;">製品ごとの現在状態</h2>
+  <table id="sessions-table">
+    <thead>
+      <tr><th>製品番号</th><th>状態</th><th>直近の社員</th><th>更新日時</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;font-size:1rem;">スキャン履歴</h2>
+  <div class="filters">
+    <input type="text" id="filter-employee" placeholder="社員コードで絞込">
+    <input type="text" id="filter-product" placeholder="製品コードで絞込">
+    <select id="filter-error">
+      <option value="">すべて</option>
+      <option value="true">エラーのみ</option>
+      <option value="false">正常のみ</option>
+    </select>
+    <button id="filter-apply">絞込</button>
+  </div>
+  <table id="history-table">
+    <thead>
+      <tr>
+        <th>日時</th><th>社員</th><th>製品</th><th>種別</th><th>結果</th><th>メッセージ</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script src="history.js"></script>
+</body>
+</html>
